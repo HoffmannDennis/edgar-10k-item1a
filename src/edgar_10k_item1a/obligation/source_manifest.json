@@ -1,0 +1,48 @@
+{
+  "manifest_kind": "bundled",
+  "manifest_version": "20261011-v1",
+  "sources": [
+    {
+      "id": "transition_faq",
+      "filename": "sec_corpfin_transition_faq_20260923.htm",
+      "url": "https://www.sec.gov/divisions/corpfin/transitionfaq.htm",
+      "sha256": "b35c82af2010c8ce3eaa4a9da6430abbb96ac45a0fb0ae85a4b875b0eaa9f9a3",
+      "source_as_of": "2005-09-13",
+      "retrieved_at": "2026-09-23",
+      "locators": ["Question 13"]
+    },
+    {
+      "id": "release_33_8591",
+      "filename": "sec_release_33-8591_20260923.pdf",
+      "url": "https://www.sec.gov/files/rules/final/33-8591.pdf",
+      "sha256": "449cb5a5b533d72b4cf56e9b3647efe2f86c306983378b435424726c42281a6b",
+      "source_as_of": "2005-12-01",
+      "retrieved_at": "2026-09-23",
+      "locators": ["PDF page 1: effective date", "PDF page 464: Form 10-K Item 1A"]
+    },
+    {
+      "id": "release_33_8876",
+      "filename": "sec_release_33-8876_20260923.pdf",
+      "url": "https://www.sec.gov/files/rules/final/2007/33-8876.pdf",
+      "sha256": "889ee7398e2652d604414f346164e33ca42aa3014608a2246be305cf822a281f",
+      "source_as_of": "2008-02-04",
+      "retrieved_at": "2026-09-23",
+      "locators": ["PDF pages 1–2: effective date/transition", "PDF page 18: historical SB forms", "PDF page 210: Form 10-K Item 1A; page 198 is Form 10"]
+    }
+  ],
+  "decision_dependencies": {
+    "R3_LEGACY_SMALL_BUSINESS_FORM": ["release_33_8876"],
+    "R4_PRE_MANDATE": ["transition_faq", "release_33_8591"],
+    "R5_SRC_EXEMPTION": ["release_33_8876"],
+    "R7_ANNUAL_ITEM1A_REQUIRED_before_2008_02_04": ["transition_faq", "release_33_8591"],
+    "R7_ANNUAL_ITEM1A_REQUIRED_from_2008_02_04": ["transition_faq", "release_33_8591", "release_33_8876"]
+  },
+  "currency": {
+    "date_axis": "filing_date",
+    "assessed_through_without_src_exception": "2005-12-01",
+    "assessed_through_with_src_exception": "2008-02-04",
+    "current_text_crosscheck": "2026-10-11",
+    "current_text_crosscheck_is_complete_historical_chain": false,
+    "assume_continuing_required_assumption": "no_material_rule_change_after_assessed_through"
+  }
+}
